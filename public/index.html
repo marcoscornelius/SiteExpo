@@ -1,37 +1,35 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/estilo.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/estilo.css">
-    <title>Document</title>
+    <title>Site Marcos</title>
 </head>
-<nav class="navbar navbar-expand-lg bg-dark py-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{{url}}">Ustart </a>
+<nav class="navbar  navbar-expand-lg py-3">
+        <div class="container-fluid ">
+            <a class="navbar-brand " href="{{url}}"> Início </a>
             <button class="navbar-toggler btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon text-light"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url}}">Início</a>
+                        <a class="nav-link" href="{{url}}">Conteúdos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="eventos">Eventos</a>
+                        <a class="nav-link" href="eventos">Contato</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="inscricoes">Inscrições</a>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="inscricoes">Jogar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url}}/sobre">sobre</a>
                     </li>
+                   
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
@@ -41,8 +39,18 @@
         </div>
     </nav>
 <body>
-<div class="box">
-    <form action="">
+    <section class="banner">
+        <div id="containerdesc" class=" justify-content-between justify-content-center">
+            <h1 class="text-white justify-content-center d-flex">Seja bem vindo!</h1>
+            <br>
+            <h4 id="descricao"  class=" text-white"> Este site foi desenvolvido com o intúito de expor meu aprendizado e técnicas desenvolvidas na aréa de desenvolvimento de sistemas, atravéz de diversos cursos e estudo de várias linguagens de programação</h4>
+            
+        </div>
+    </section>
+
+    <h2></h2>
+<div class="box" id="box1">
+    <form action="post">
         <fieldset>
             <legend>Deixe seu comentário sobre o Site:</legend>
             <br>
@@ -55,12 +63,30 @@
                 <input type="text" name="comentario" id="comentario" class="imputUser">
                 <label for="nome">Digite seu comentário</label>
             </div>
-            <br>
+           
             <imput type="submit" name="submit" id="submit">
         </fieldset>
     <form>
 </div>
-
+<div class="box" id="box2">
+    <form action="">
+        <fieldset>
+            <legend>Deixe sua nota para o Site:</legend>
+            <div class=" justify-content-around d-flex">
+                <input type="radio" name="nota" id="nota1" value="nota1" required>
+                <label for="nota1">1</label>
+                <input type="radio" name="nota" id="nota2" value="nota2" required>
+                <label for="nota2">2</label>
+                <input type="radio" name="nota" id="nota3" value="nota3" required>
+                <label for="nota3">3</label>
+                <input type="radio" name="nota" id="nota4" value="nota4" required>
+                <label for="nota4">4</label>
+                <input type="radio" name="nota" id="nota5" value="nota5" required>
+                <label for="nota5">5</label>
+            </div>
+        </fieldset>
+    <form>
+</div>
     <div class="container" >
         <?php print_r($_GET); ?>
     </div>
