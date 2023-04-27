@@ -1,17 +1,30 @@
 
 body{
+    background-image: url(../resources/imagens/imagem3.avif);
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right, rgb(156, 156, 167), rgb(78, 117, 117));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
 }
 #submit{
     color: white;
 }
 #descricao{
    margin-right: 31%;
+   margin-left: 5%;
 
 }
+
+
+.imputUser{
+    width: 100%;  
+    
+    box-sizing: border-box;
+    
+}
 #box2{
-    top: 47%;
+    top: 70%;
     left: 78%;
 }
 .nav-link:hover, .navbar-brand:hover{
@@ -28,6 +41,7 @@ body{
     position: absolute;
     top: 20%;
     left: 78%;
+    right: 2%;
     transform: translate(-20%,-20%);
     background-color: rgba(15, 21, 58, 0.77);
     color: white;
@@ -35,7 +49,14 @@ body{
     padding: 10px;
     border-radius: 10px;
     width: 21%;
+    box-sizing: border-box;
     
+}
+#submit{
+    border: 5px solid black;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
 }
 .box:hover{
     box-shadow: rgba(255, 254, 254, 0.425) 0px 0px 20px 20px;
@@ -58,10 +79,39 @@ legend{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 500px;
+    height: 700px;
     width: 100%;
 }
 #containerdesc{
-    width: 100%;
+    
     justify-content: left;
+}
+.container-eventos {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(143, 136, 136, 0.1);
+    border: 2px solid black;
+    width: 100%;
+    
+    
+}
+#conteudos{
+    color: black;
+    justify-content: center;
+    text-align: center;
+   
+}
+.coluna-evento{
+    border: 2px solid black;
+    
+}
+.imagem-conteudo{
+    height: 150px;
+    width: 150px;
+}
+.titulo-conteudo{
+    
+    text-align: center;
+   justify-content: center;
+    
 }
