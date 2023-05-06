@@ -7,13 +7,11 @@ body{
     background-attachment: fixed;
     
 }
-#submit{
-    color: white;
-}
-#descricao{
-   margin-right: 31%;
-   margin-left: 5%;
 
+#descricao{
+    margin-right: 5%;
+    margin-left: 5%;
+text-align: justify;
 }
 
 
@@ -24,11 +22,19 @@ body{
     
 }
 #box2{
-    top: 70%;
-    left: 78%;
+    
+    background-color: rgba(15, 21, 58, 0.77);
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 10%;
+    
+    width: 30%;
+    box-sizing: border-box;
 }
-.nav-link:hover, .navbar-brand:hover{
+.nav-link:hover, .navbar-brand:hover, #submit:hover{
     background-color: white;
+    color: black;
 
 }
 .navbar-brand, .nav-link, .navbar, .container-fluid{
@@ -36,19 +42,69 @@ body{
     background-color: black;
  
 }
+@media(max-width: 799px) {
+    #containerdesc{
+       
+    
+       
+    }
+    #box2{
+        width: 90%;
+        height: 120px;;
+        margin-left: 2%;
+    }
+    .table-dark{
+       width: 95%;
+       
+       margin-bottom: 12%;
+       
+    }
+    #box1{
+
+      
+        width: 100%;
+      margin-right: 5%;
+ 
+    }
+    .pt2{
+   margin-top: 2%;
+   display: grid;
+   margin-right: 5%;
+    }   
+}
+
+@media(min-width: 800px) {
+    #containerdesc{
+        display: flex;
+    margin-right: 5%;
+       
+    }
+    #box1{
+      height: 80%;
+       margin-top: 5%;
+        margin-left: 10%;
+        width: 25%;
+       transform: translate(-20%,-20%);
+    }
+    .table-dark{
+        width: 80%;
+        
+     }
+.pt2{
+    display: flex;
+   margin-top: 2%;
+}
+
+}
+
 
 .box{
-    position: absolute;
-    top: 20%;
-    left: 78%;
-    right: 2%;
-    transform: translate(-20%,-20%);
     background-color: rgba(15, 21, 58, 0.77);
     color: white;
     border: 2px solid black;
     padding: 10px;
     border-radius: 10px;
-    width: 21%;
+   
     box-sizing: border-box;
     
 }
@@ -58,12 +114,37 @@ body{
     background-color: black;
     color: white;
 }
+.tabela-head{
+  
+    
+    display: flex;
+    
+}
+#tabela-b{
+    overflow: auto;
+    overflow-y: scroll;
+   display: block;
+   height: 100%;
+   
+}
+
+
+.table-dark{
+    
+    height: 300px;
+    justify-content: center;
+    text-align: center;
+    
+  margin-left: 5%;
+    display: block;
+}
+
 .box:hover{
     box-shadow: rgba(255, 254, 254, 0.425) 0px 0px 20px 20px;
 }
 fieldset{
     border: 2px solid black;
-    padding: 5px;
+    padding: 10px;
     border-radius: 9px;
 }
 legend{
@@ -79,14 +160,11 @@ legend{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 700px;
+    
     width: 100%;
 }
-#containerdesc{
-    
-    justify-content: left;
-}
-.container-eventos {
+
+.container-conteudo {
     background: white;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(143, 136, 136, 0.1);

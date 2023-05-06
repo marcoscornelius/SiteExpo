@@ -1,9 +1,3 @@
-<script>
-    if(isset($_POST['submit'])){
-        print_r($_POST['nome']);
-        print_r($_POST['comentario']);
-    }
-</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +9,9 @@
     <link rel="stylesheet" href="../style/estilo.css">
     <script type="text/javascript" src="/jquery/jquery-3.6.4.min.js"></script> 
     <title>Site Marcos</title>
+    <?php
+   
+    ?>
 </head>
 <nav class="navbar  navbar-expand-lg py-3">
         <div class="container-fluid ">
@@ -47,59 +44,83 @@
     </nav>
 <body>
     <section class="banner">
+        <h1 class="text-white justify-content-center d-flex">
+            Seja bem vindo!
+        </h1>
+        <br>
         <div id="containerdesc" class=" justify-content-between justify-content-center">
-            <h1 class="text-white justify-content-center d-flex">Seja bem vindo!</h1>
-            <br>
-            <h4 id="descricao"  class=" text-white"> Este site foi desenvolvido com o intúito de expor meu aprendizado e conhecimento na aréa de desenvolvimento de sistemas, adquirido atravéz de diversos cursos e estudo de várias linguagens de programação</h4>
-            
-        </div>
+            <h4 id="descricao"  class=" text-white">
+                 Este site foi desenvolvido com o intúito de expor meu trabalho, realizar testes e aplicar meu conhecimento na area de programação e desenvolvimento de sistemas.
+                 O site conta com um banco de dados SQL que vai armazenar as informações que você preencher nos campos de texto, seu comentario irá aparecer no site após ser aceito.
+                 Fique a vontade para inspecionar o site, testar sua responsividade em diferentes resoluções e avaliar o código.
+            </h4>
+            <div class="box" id="box2">
+                <form action="" method="post">
+                    <fieldset>
+                        <legend>
+                            Deixe sua nota para o Site:
+                        </legend>
+                        <div class=" justify-content-around d-flex">
+                                    <input type="radio" name="nota" id="nota1" value="nota1" >
+                                    <label for="nota1">1</label>
+                                    <input type="radio" name="nota" id="nota2" value="nota2" >
+                                    <label for="nota2">2</label>
+                                    <input type="radio" name="nota" id="nota3" value="nota3" >
+                                    <label for="nota3">3</label>
+                                    <input type="radio" name="nota" id="nota4" value="nota4" >
+                                    <label for="nota4">4</label>
+                                    <input type="radio" name="nota" id="nota5" value="nota5" >
+                                    <label for="nota5">5</label>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>   
+        </div>       
     </section>
-
-    <h2></h2>
-<div class="box" id="box1">
-    <form action="../app/comentario.php" method="POST">
-        <fieldset>
-            <legend>Deixe seu comentário sobre o Site:</legend>
-            <br>
-            <div class="imputbox">
-                <label for="nome">Digite seu nome</label>
-                <input type="text" name="nome" id="nome" class="imputUser " required>
-                
-            </div>
-            <br>
-            <div class="imputbox">
-                 <label for="comentario">Digite seu comentário</label>
-                <textarea name="comentario" id="comentario" rows="5" class="imputUser" required></textarea>
-            </div>
-            <br>
-            <button type="submit" name="submit" id="submit">Enviar</button>
-        </fieldset>
-    <form>
-</div>
-<div class="box" id="box2">
-    <form action="" method="post">
-        <fieldset>
-            <legend>Deixe sua nota para o Site:</legend>
-            <div class=" justify-content-around d-flex">
-                <input type="radio" name="nota" id="nota1" value="nota1" >
-                <label for="nota1">1</label>
-                <input type="radio" name="nota" id="nota2" value="nota2" >
-                <label for="nota2">2</label>
-                <input type="radio" name="nota" id="nota3" value="nota3" >
-                <label for="nota3">3</label>
-                <input type="radio" name="nota" id="nota4" value="nota4" >
-                <label for="nota4">4</label>
-                <input type="radio" name="nota" id="nota5" value="nota5" >
-                <label for="nota5">5</label>
-            </div>
-        </fieldset>
-    <form>
-</div>
-
-<section class="container container-eventos pt-5">
+    <br>
+    <div class="pt2">
+        <table class="table table-dark table-striped">
+            <thead class="tabela-head">
+                <tr class="tabela-head">
+                        <th  scope="col">Nome</th>
+                        <th  scope="col">Comentario</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-b">
+                    <?php
+                    include_once('../app/sistema.php');
+                        while($user_data = mysqli_fetch_assoc($resultado)){
+                            echo "<tr>";
+                            echo "<td>".$user_data['nome']."</td>";
+                            echo "<td>".$user_data['comentario']."</td>";
+                        }
+                    ?>
+            </tbody>
+        </table>
+        <div class="box" id="box1">
+            <form action="../app/comentario.php" method="POST">
+                <fieldset>
+                    <legend>Deixe seu comentário sobre o Site</legend>
+                    <br>
+                    <div class="imputbox">
+                        <label for="nome">Digite seu nome</label>
+                        <input type="text" name="nome" id="nome" class="imputUser " required> 
+                    </div>
+                    <br>
+                    <div class="imputbox">
+                            <label for="comentario">Digite seu comentário</label>
+                            <textarea name="comentario" id="comentario" rows="5" class="imputUser" required></textarea>
+                    </div>
+                    <br>
+                    <button type="submit" name="submit" id="submit">Enviar</button>
+                </fieldset>
+            <form>
+        </div>   
+    </div>
+<section class="container container-conteudo pt-3">
     <h2 style="color: black; " id="conteudos">Conteúdos estudados</h2>
     <div class="row">
-        <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent">
+        <div class="col-12 col-md-6 ">
             <div class="card-body ">
                 <h3 class="titulo-conteudo">
                     HTML
@@ -111,7 +132,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent">
+        <div class="col-12 col-md-6 ">
             <div class="card-body ">
                 <h3 class="titulo-conteudo">
                     CSS
@@ -122,7 +143,7 @@
                  </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent">
+        <div class="col-12 col-md-6 ">
             <div class="card-body ">
                 <h3 class="titulo-conteudo">
                     PHP
@@ -133,7 +154,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent">
+        <div class="col-12 col-md-6 ">
             <div class="card-body ">
                 <h3 class="titulo-conteudo">
                     SQL
@@ -145,7 +166,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent">
+        <div class="col-12 col-md-6 ">
             <div class="card-body ">
                 <h3 class="titulo-conteudo">
                     JAVASCRIPT
@@ -158,7 +179,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent">
+        <div class="col-12 col-md-6 ">
             <div class="card-body ">
                 <h3 class="titulo-conteudo">
                     JAVA 
@@ -169,7 +190,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent">
+        <div class="col-12 col-md-6 ">
             <div class="card-body ">
                 <h3 class="titulo-conteudo">
                     HTML
@@ -181,7 +202,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 coluna-evento card border-0 p-0 bg-transparent">
+        <div class="col-12 col-md-6 ">
             <div class="card-body ">
                 <h3 class="titulo-conteudo">
                     HTML
@@ -195,12 +216,8 @@
         </div>
     </div>
 </section>
-<section class="w-100 banner-2 align-items-center">
-</section>
-    <div class="container" >
-        <?php print_r($_GET); ?>
-    </div>
-    {{header}}
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
