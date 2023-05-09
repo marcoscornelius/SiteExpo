@@ -1,5 +1,5 @@
 
-body{
+#b1{
     background-image: url(../resources/imagens/imagem3.avif);
     font-family: Arial, Helvetica, sans-serif;
     background-size: cover;
@@ -40,8 +40,16 @@ text-align: justify;
 .navbar-brand, .nav-link, .navbar, .container-fluid{
     color: white;
     background-color: black;
- 
 }
+.footer{
+
+justify-content: center;
+text-align: center;
+bottom: 0;
+
+    left: 0;
+}
+
 @media(max-width: 799px) {
     #containerdesc{
        
@@ -170,7 +178,7 @@ legend{
     box-shadow: 0 4px 30px rgba(143, 136, 136, 0.1);
     border: 2px solid black;
     width: 100%;
-    
+    margin-bottom: 70px;
     
 }
 #conteudos{
@@ -187,9 +195,78 @@ legend{
     height: 150px;
     width: 150px;
 }
-.titulo-conteudo{
-    
+.contato-texto{
+    color: white;
     text-align: center;
-   justify-content: center;
+   
+  
+}
+
+.page-contato{
+    align-items: center;
     
+    
+    
+}
+
+#b2{
+    background-image: linear-gradient(to right, rgb(40, 65, 148),rgb(39, 22, 68));
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.caixa-solicitacao{
+    background-color:white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+   margin-top: 2%;
+   margin-bottom: 7%;  
+   text-align: justify;  
+}
+
+.carousel{
+    justify-content: center;
+    text-align: center;
+    margin-top: 2%;
+}
+.img-contato{
+    
+    height: 350px;
+}
+.imput-solicitacao{
+width: 100%;
+}
+    .page-contato{
+   display: flex;
+    justify-content: space-evenly;
+    text-align: justify;
+    margin-top: 2%;
+    }
+    .solicite{
+        border: 2px solid black;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    
+    @media(max-width: 594px) {
+        .page-contato{
+            display: block;
+        }
+        .img-contato{
+            width: 300px;
+            height: 250px;
+        }
+    }
+
+@media(max-width: 1150px) {
+    
+   
+    #b2{
+        margin-bottom: 100px;
+    }
 }

@@ -7,42 +7,16 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/estilo.css">
-    <script type="text/javascript" src="/jquery/jquery-3.6.4.min.js"></script> 
+    
     <title>Site Marcos</title>
     <?php
    
     ?>
 </head>
-<nav class="navbar  navbar-expand-lg py-3">
-        <div class="container-fluid ">
-            <a class="navbar-brand " href="{{url}}"> Início </a>
-            <button class="navbar-toggler btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon text-light"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url}}">Conteúdos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../resources/view/pages/Contato.html">Contato</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="jogar">Jogar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre">sobre</a>
-                    </li>
-                   
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Pesquisar</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-<body>
+<?php
+include('../resources/view/pages/header.html')
+?>
+<body id="b1">
     <section class="banner">
         <h1 class="text-white justify-content-center d-flex">
             Seja bem vindo!
@@ -51,8 +25,8 @@
         <div id="containerdesc" class=" justify-content-between justify-content-center">
             <h4 id="descricao"  class=" text-white">
                  Este site foi desenvolvido com o intúito de expor meu trabalho, realizar testes e aplicar meu conhecimento na area de programação e desenvolvimento de sistemas.
-                 O site conta com um banco de dados SQL que vai armazenar as informações que você preencher nos campos de texto, seu comentario irá aparecer no site após ser aceito.
-                 Fique a vontade para inspecionar o site, testar sua responsividade em diferentes resoluções e avaliar o código.
+                 O site conta com um banco de dados SQL que vai armazenar as informações que você preencher nos campos de texto.
+                 Inspecione o site, teste sua responsividade em diferentes resoluções, avalie o código.
             </h4>
             <div class="box" id="box2">
                 <form action="" method="post">
@@ -216,8 +190,10 @@
         </div>
     </div>
 </section>
-
-
+<?php
+include('../resources/view/pages/footer.html')
+?>
+    <script type="text/javascript" src="../app/functions/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
